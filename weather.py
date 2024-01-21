@@ -246,10 +246,6 @@ w. place (x=150,y=180)
 d=Label (root, font=("Helvetica", 11),fg="white",bg="#203243")
 d.place(x=150,y=200)
 
-
-
 atexit.register(cleanup_icon_temp)
-
-
 
 root.mainloop()
