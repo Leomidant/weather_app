@@ -18,7 +18,6 @@ root. resizable(False,False)
 folder_to_clean = "icon_temp"
 os.makedirs(folder_to_clean, exist_ok=True)
 def cleanup_icon_temp():
-    print("Cleaning up folder:", folder_to_clean)
     try:
         # Delete the folder and its contents
         shutil.rmtree(folder_to_clean)
@@ -83,51 +82,47 @@ def getWeather():
 
     download_all_images(json_data)
     first = datetime.now()
-    day1.config(text=first.strftime("%A")[:3])
+    day1.config(text=first.strftime("%A")[:3], fg='white')
     photo1 = ImageTk.PhotoImage(file="./icon_temp/1.png")
     firstImage.config(image=photo1)
     firstImage.image=photo1
     day1MaxMinTemp.config(text=currentMaxMinTempString)
 
     second = first + timedelta(days=1)
-    day2.config(text=second.strftime("%A")[:3])
+    day2.config(text=second.strftime("%A")[:3], fg='white')
     photo2 = ImageTk.PhotoImage(file="./icon_temp/2.png")
     secondImage.config(image=photo2)
     secondImage.image=photo2
 
     third = first + timedelta(days=2)
-    day3.config(text=third.strftime("%A")[:3])
+    day3.config(text=third.strftime("%A")[:3], fg='white')
     photo3 = ImageTk.PhotoImage(file="./icon_temp/3.png")
     thirdImage.config(image=photo3)
     thirdImage.image=photo3
 
     fourth = first + timedelta(days=3)
-    day4.config(text=fourth.strftime("%A")[:3])
+    day4.config(text=fourth.strftime("%A")[:3], fg='white')
     photo4 = ImageTk.PhotoImage(file="./icon_temp/4.png")
     fourthImage.config(image=photo4)
     fourthImage.image=photo4
 
     fifth = first + timedelta(days=4)
-    day5.config(text=fifth.strftime("%A")[:3])
+    day5.config(text=fifth.strftime("%A")[:3], fg='white')
     photo5 = ImageTk.PhotoImage(file="./icon_temp/5.png")
     fifthImage.config(image=photo5)
     fifthImage.image=photo5
 
     sixth = first + timedelta(days=5)
-    day6.config(text=sixth.strftime("%A")[:3])
+    day6.config(text=sixth.strftime("%A")[:3], fg='white')
     photo6 = ImageTk.PhotoImage(file="./icon_temp/6.png")
     sixthImage.config(image=photo6)
     sixthImage.image=photo6
 
     seventh = first + timedelta(days=6)
-    day7.config(text=seventh.strftime("%A")[:3])
+    day7.config(text=seventh.strftime("%A")[:3], fg='white')
     photo7 = ImageTk.PhotoImage(file="./icon_temp/7.png")
     seventhImage.config(image=photo7)
     seventhImage.image=photo7
-
-
-
-
 
 
 
@@ -173,57 +168,57 @@ mainbox=PhotoImage(file="Images/round1.png")
 
 
 #Forecast Days
-firstFrame = Frame(root,width=230, height=132,bg='white')
-firstFrame.place(x=35,y=315)
-day1 = Label(firstFrame, font="arial 20", bg="#282829", fg="#fff")
+firstFrame = Frame(root,width=230, height=132, bg='#212120')
+firstFrame.place(x=35,y=325)
+day1 = Label(firstFrame, font="arial 20", bg="#212120", fg="#fff")
 day1.place(x=100, y=5)
-firstImage = Label(firstFrame, bg="#282829")
-firstImage.place(x=1, y=15)
-day1MaxMinTemp = Label(firstFrame, font="arial 20", bg="#282829", fg="#fff")
-day1MaxMinTemp.place(x=75, y=45)
+firstImage = Label(firstFrame, bg="#212120")
+firstImage.place(x=1, y=40)
+day1MaxMinTemp = Label(firstFrame, font="arial 20", bg="#212120", fg="white")
+day1MaxMinTemp.place(x=70, y=45)
 
 
-secondFrame = Frame(root,width=70, height=115,bg='white')
+secondFrame = Frame(root,width=70, height=115,bg='#212120')
 secondFrame.place(x=305,y=325)
-day2 = Label(secondFrame, font="arial 20", bg="#282829", fg="#fff")
+day2 = Label(secondFrame, font="arial 20", bg="#212120", fg="white")
 day2.place(x=10, y=5)
-secondImage = Label(secondFrame, bg="#282829")
+secondImage = Label(secondFrame, bg="#212120")
 secondImage.place(x=0,y=40)
 
 
-thirdFrame = Frame(root,width=70, height=115,bg='white')
+thirdFrame = Frame(root,width=70, height=115,bg='#212120')
 thirdFrame.place(x=405,y=325)
-day3 = Label(thirdFrame, font="arial 20", bg="#282829", fg="#fff")
+day3 = Label(thirdFrame, font="arial 20", bg="#212120", fg="#fff")
 day3.place(x=10, y=5)
-thirdImage = Label(thirdFrame, bg="#282829")
+thirdImage = Label(thirdFrame, bg="#212120")
 thirdImage.place(x=0,y=40)
 
-fourthFrame = Frame(root,width=70, height=115,bg='white')
+fourthFrame = Frame(root,width=70, height=115, bg="#212120")
 fourthFrame.place(x=505,y=325)
-day4 = Label(fourthFrame, font="arial 20", bg="#282829", fg="#fff")
+day4 = Label(fourthFrame, font="arial 20", bg="#212120", fg="#fff")
 day4.place(x=10, y=5)
-fourthImage = Label(fourthFrame, bg="#282829")
+fourthImage = Label(fourthFrame, bg="#212120")
 fourthImage.place(x=0,y=40)
 
-fifthFrame = Frame(root,width=70, height=115,bg='white')
+fifthFrame = Frame(root,width=70, height=115, bg="#212120")
 fifthFrame.place(x=605,y=325)
-day5 = Label(fifthFrame, font="arial 20", bg="#282829", fg="#fff")
+day5 = Label(fifthFrame, font="arial 20", bg="#212120", fg="#fff")
 day5.place(x=10, y=5)
-fifthImage = Label(fifthFrame, bg="#282829")
+fifthImage = Label(fifthFrame, bg="#212120")
 fifthImage.place(x=0,y=40)
 
-sixthFrame = Frame(root,width=70, height=115,bg='white')
+sixthFrame = Frame(root,width=70, height=115, bg="#212120")
 sixthFrame.place(x=705,y=325)
-day6 = Label(sixthFrame, font="arial 20", bg="#282829", fg="#fff")
+day6 = Label(sixthFrame, font="arial 20", bg="#212120", fg="#fff")
 day6.place(x=10, y=5)
-sixthImage = Label(sixthFrame, bg="#282829")
+sixthImage = Label(sixthFrame, bg="#212120")
 sixthImage.place(x=0,y=40)
 
-seventhFrame = Frame(root,width=70, height=115,bg='white')
+seventhFrame = Frame(root,width=70, height=115, bg="#212120")
 seventhFrame.place(x=805,y=325)
-day7 = Label(seventhFrame, font="arial 20", bg="#282829", fg="#fff")
+day7 = Label(seventhFrame, font="arial 20", bg="#212120", fg="#fff")
 day7.place(x=10, y=5)
-seventhImage = Label(seventhFrame, bg="#282829")
+seventhImage = Label(seventhFrame, bg="#212120")
 seventhImage.place(x=0,y=40)
 
 
@@ -251,10 +246,6 @@ w. place (x=150,y=180)
 d=Label (root, font=("Helvetica", 11),fg="white",bg="#203243")
 d.place(x=150,y=200)
 
-
-
 atexit.register(cleanup_icon_temp)
-
-
 
 root.mainloop()
